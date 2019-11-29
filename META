@@ -1,0 +1,6 @@
+NEEDLIBS = zero jdk0
+
+SUBDIRS = AI
+
+LIBNAME = ai
+NUMBERENV = int
