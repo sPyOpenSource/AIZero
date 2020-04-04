@@ -1,7 +1,6 @@
 package AI;
 
 import AI.Models.InfoZero;
-import java.io.IOException;
 import java.net.DatagramPacket;
 
 import java.util.ArrayList;
@@ -19,7 +18,7 @@ public abstract class AIZeroMemory
 {
     // instance variables
     private double emotion = 0;
-    private HashMap<String, List<InfoZero>> dict = new HashMap<>();
+    private final HashMap<String, List<InfoZero>> dict = new HashMap<>();
     private String LOG;
     private final String[] shortterm;
     
@@ -34,7 +33,7 @@ public abstract class AIZeroMemory
     
     public void SaveShort(String x, int n)
     {
-        shortterm[n % shortterm.length] = x;    
+        shortterm[n % shortterm.length] = x;
     }
 
     public String GetShortMemory(int j)
