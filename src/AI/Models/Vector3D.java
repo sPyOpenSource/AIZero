@@ -14,22 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+ 
 package AI.Models;
 
 /**
  *
  * @author X. Wang
  */
+ 
 public class Vector3D extends Vector<Double>{
     public Vector3D(Double x, Double y, Double z){
         super(x, y, z);
     }
     
     public double getLength(){
-        if (x != 0 || y != 0 || z != 0)
+        if (x != 0 || y != 0 || z != 0){
             return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
-        else
+        } else {
             return 1;
+        }
     }
     
     public Vector3D getUnitVector(){

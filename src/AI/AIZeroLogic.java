@@ -6,12 +6,13 @@ package AI;
  * @author X. Wang 
  * @version 1.0
  */
+
 public abstract class AIZeroLogic implements Runnable
 {
     // instance variables
     protected final AIZeroMemory mem;
-    private final double dt = 0.02; // in s
-    private final double percentage = 0.5;
+    protected final double dt = 0.02; // in seconds
+    protected final double percentage = 0.5;
         
     /**
      * Constructor for objects of class AILogic
@@ -20,7 +21,7 @@ public abstract class AIZeroLogic implements Runnable
     public AIZeroLogic(AIZeroMemory mem)
     {
         // sign an instance variable        
-	this.mem = mem;
+        this.mem = mem;
     }
 
     /**
@@ -36,7 +37,7 @@ public abstract class AIZeroLogic implements Runnable
             } catch (InterruptedException e) {
                 Logger.getLogger(AIBaseLogic.class.getName()).log(Level.SEVERE, null, e);
             }   
-        }*/	
+        }*/
     }
     
     /*private void ProcessMessages(){

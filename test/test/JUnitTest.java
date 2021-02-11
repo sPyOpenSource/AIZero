@@ -11,7 +11,6 @@ import org.junit.Test;
  * @author X. Wang
  */
 public class JUnitTest extends TestCase{
-
     @Test
     public void testPID(){
         PID pid = new PID(1, 1, 1);
@@ -33,5 +32,4 @@ public class JUnitTest extends TestCase{
         y = pid.Compute(10, 10, 10);
         assertEquals(y, - 150.0);
     }
-
 }

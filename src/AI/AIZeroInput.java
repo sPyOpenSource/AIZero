@@ -1,11 +1,11 @@
 package AI;
+
 /**
  * This is the input class of AI.
  * 
  * @author X. Wang 
  * @version 1.0
  */
-
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -17,7 +17,7 @@ public abstract class AIZeroInput implements Runnable
      * This is the initialization of AIInput class 
      */
     protected final AIZeroMemory mem;
-    private final static int BUFFER_SIZE = 1024;
+    protected final static int BUFFER_SIZE = 1024;
     
     /**
      * Constructor for objects of class AIInput

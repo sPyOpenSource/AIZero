@@ -4,6 +4,7 @@ package AI.util;
  *
  * @author X. Wang
  */
+
 public class PID {
     private final double kp, ki, kd;
     private double temp, max, min, setpoint;
@@ -30,15 +31,17 @@ public class PID {
     public double Compute(double x, double v, double dt){
         double error = setpoint - x;
         temp += error * dt * ki;
-        if(temp > max)
+        if(temp > max){
             temp = max;
-        else if (temp < min)
+        } else if (temp < min){
             temp = min;
+        }
         double output = temp + error * kp - x * kd;
-        if (output > max)
+        if (output > max){
             output = max;
-        else if(output < min)
+        } else if(output < min){
             output = min;
+        }
         return output;
     }
 }

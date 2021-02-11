@@ -6,10 +6,11 @@ package AI;
  * @author X. Wang
  * @version 1.0
  */
+ 
 public abstract class AIZeroOutput implements Runnable
 {
     protected final AIZeroMemory mem;
-    private final double dt = 0.01; // in s
+    protected final double dt = 0.01; // in seconds
  
     /**
      * Constructor for objects of class AIOutput
@@ -82,11 +83,11 @@ public abstract class AIZeroOutput implements Runnable
             }
         };
         persistence.start();*/
-        while(true){
+        /*while(true){
             Send();
             Thread();
             AIZeroLogic.Wait(dt);
-        }
+        }*/
     }
     
     abstract protected void Thread();

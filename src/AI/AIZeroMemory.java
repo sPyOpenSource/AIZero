@@ -1,13 +1,15 @@
 package AI;
 
 import AI.Models.InfoZero;
-import java.net.DatagramPacket;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
+import java.net.DatagramPacket;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 
-        
 /**
  * This is the memory class of AI.
  * 
@@ -47,30 +49,34 @@ public abstract class AIZeroMemory
     }
     
     public void addInfo(InfoZero info, String key){
-        if(info != null && key != null)
-            search(key).add(info);
+        if(info != null && key != null){
+            searchZero(key).add(info);
+        }
     }
     
     public InfoZero dequeFirst(String key){
-        List<InfoZero> messages = search(key);
-        if (messages.size() > 0)
+        List<InfoZero> messages = searchZero(key);
+        if (messages.size() > 0){
             return messages.remove(0);
+        }
         return null;
     }
     
     public InfoZero dequeLast(String key){
-        List<InfoZero> messages = search(key);
+        List<InfoZero> messages = searchZero(key);
         int length = messages.size();
-        if (length > 0)
+        if (length > 0){
             return messages.remove(length - 1);
+        }
         return null; 
     }
     
     public InfoZero getLast(String key){
-        List<InfoZero> messages = search(key);
+        List<InfoZero> messages = searchZero(key);
         int length = messages.size();
-        if (length > 0)
+        if (length > 0){
             return messages.get(length - 1);
+        }
         return null;
     }
 
@@ -88,7 +94,7 @@ public abstract class AIZeroMemory
         return emotion;
     }
     
-    private List<InfoZero> search(String key)
+    public List<InfoZero> searchZero(String key)
     {
         if (dict.containsKey(key)){
             return dict.get(key);
@@ -147,16 +153,16 @@ public abstract class AIZeroMemory
         thread.start();*/
     }
     
-    /*public void CleanClients(){
-        for(Iterator<Info> iterator = search("networkClients").iterator(); iterator.hasNext();){
+    public void CleanClients(){
+        /*for(Iterator<Info> iterator = search("networkClients").iterator(); iterator.hasNext();){
             Info client = iterator.next();
             if(!client.isOnline())
                 iterator.remove();
-        }
-    }*/
+        }*/
+    }
     
-    /*public void Save(String file){
-        try {
+    public void Save(String file){
+        /*try {
             ObjectOutputStream memory = new ObjectOutputStream(new FileOutputStream(new File(file + ".dict")));
             removeAll("networkClients");
             removeAll("colorCameraImages");
@@ -165,8 +171,8 @@ public abstract class AIZeroMemory
             memory.writeObject(dict);
         } catch (IOException ex) {
             Logger.getLogger(AIBaseMemory.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }*/
+        }*/
+    }
     
     public void Import(String file){
         /*try {
@@ -179,20 +185,20 @@ public abstract class AIZeroMemory
     }
     
     public void ImportTxt(String file){
-        //addInfo(new InfoZero("x"), "y");
-        /*try {
-            BufferedReader memory = new BufferedReader(new FileReader(file + ".TXT"));
+        try {
+            BufferedReader memory = new BufferedReader(new FileReader(file + ".txt"));
             String line;
             while((line = memory.readLine()) != null){
                 String[] pair = line.split("::");
-                if (pair.length == 2)
-                    addInfo(new Info(pair[1]), pair[0]);
-                else
-                    addInfo(new Info(""), pair[0]);
+                if (pair.length == 2){
+                    addInfo(new InfoZero(pair[1]), pair[0]);
+                } else {
+                    addInfo(new InfoZero(""), pair[0]);
+                }
             memory.close();
             }
         } catch (IOException ex) {
             //Logger.getLogger(AIBaseMemory.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
     }
 }
