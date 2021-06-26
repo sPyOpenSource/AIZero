@@ -90,5 +90,5 @@ public abstract class AIZeroOutput implements Runnable
         }*/
     }
     
-    abstract protected void Thread();
+    abstract protected void loop();
 }

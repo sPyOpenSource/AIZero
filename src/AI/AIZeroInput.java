@@ -71,9 +71,9 @@ public abstract class AIZeroInput implements Runnable
                     mem.AddWebsocketClient();
             }
         };
-        AddWebsocketClient.start();
-        Thread();*/
+        AddWebsocketClient.start();*/
+        setup();
     }
     
-    abstract protected void Thread();
+    abstract protected void setup();
 }

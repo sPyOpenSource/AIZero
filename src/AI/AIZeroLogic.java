@@ -131,5 +131,5 @@ public abstract class AIZeroLogic implements Runnable
         }*/
     }
     
-    abstract protected void Thread();
+    abstract protected void loop();
 }
