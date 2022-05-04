@@ -1,3 +1,3 @@
 # AIZero
 
-This is the base of the AI project.
+This is the base of the AI library.
