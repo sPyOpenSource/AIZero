@@ -1,3 +1,3 @@
 # AIZero
 
-This is the base of the AI library.
+This is the base library of the AI application.
