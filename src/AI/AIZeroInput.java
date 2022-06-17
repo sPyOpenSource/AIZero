@@ -28,7 +28,7 @@ public abstract class AIZeroInput implements Runnable
     	this.mem = mem;
     }
     
-    private void ImportMemoryTxt(){
+    private void ImportBackupMemory(){
         try {
             BufferedReader log = new BufferedReader(new FileReader(mem.getLogPath() + "LOG.TXT"));
             String memory = log.readLine();
@@ -46,10 +46,10 @@ public abstract class AIZeroInput implements Runnable
                 memory = log.readLine();
             }
             if(memory != null)
-                mem.ImportTxt(mem.getLogPath() + memory);
+                mem.ImportBackup(mem.getLogPath() + memory);
         } catch (IOException ex) {
             //Logger.getLogger(AIBaseInput.class.getName()).log(Level.SEVERE, null, ex);
-            ImportMemoryTxt();
+            ImportBackupMemory();
         }
     }
 

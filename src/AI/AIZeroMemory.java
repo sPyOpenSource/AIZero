@@ -48,7 +48,7 @@ public abstract class AIZeroMemory
         return shortterm.length;
     }
     
-    public void addInfo(InfoZero info, String key){
+    public void add(InfoZero info, String key){
         if(info != null && key != null){
             searchZero(key).add(info);
         }
@@ -56,7 +56,7 @@ public abstract class AIZeroMemory
     
     public InfoZero dequeFirst(String key){
         List<InfoZero> messages = searchZero(key);
-        if (messages.size() > 0){
+        if (!messages.isEmpty()){
             return messages.remove(0);
         }
         return null;
@@ -184,18 +184,18 @@ public abstract class AIZeroMemory
         }*/
     }
     
-    public void ImportTxt(String file){
+    public void ImportBackup(String file){
         try {
             BufferedReader memory = new BufferedReader(new FileReader(file + ".txt"));
             String line;
             while((line = memory.readLine()) != null){
                 String[] pair = line.split("::");
                 if (pair.length == 2){
-                    addInfo(new InfoZero(pair[1]), pair[0]);
+                    add(new InfoZero(pair[1]), pair[0]);
                 } else {
-                    addInfo(new InfoZero(""), pair[0]);
+                    add(new InfoZero(""), pair[0]);
                 }
-            memory.close();
+                memory.close();
             }
         } catch (IOException ex) {
             //Logger.getLogger(AIBaseMemory.class.getName()).log(Level.SEVERE, null, ex);
