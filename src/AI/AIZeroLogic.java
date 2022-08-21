@@ -7,7 +7,7 @@ package AI;
  * @version 1.0
  */
 
-public abstract class AIZeroLogic implements Runnable
+public abstract class AIZeroLogic extends Thread
 {
     // instance variables
     protected final AIZeroMemory mem;
@@ -20,6 +20,7 @@ public abstract class AIZeroLogic implements Runnable
      */
     public AIZeroLogic(AIZeroMemory mem)
     {
+        super("logic");
         // sign an instance variable        
         this.mem = mem;
     }

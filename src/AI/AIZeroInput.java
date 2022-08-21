@@ -11,7 +11,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public abstract class AIZeroInput implements Runnable
+public abstract class AIZeroInput extends Thread
 {
     /**
      * This is the initialization of AIInput class 
@@ -25,6 +25,7 @@ public abstract class AIZeroInput implements Runnable
      */
     public AIZeroInput(AIZeroMemory mem)
     {
+        super("input");
     	this.mem = mem;
     }
     

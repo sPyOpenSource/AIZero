@@ -7,7 +7,7 @@ package AI;
  * @version 1.0
  */
  
-public abstract class AIZeroOutput implements Runnable
+public abstract class AIZeroOutput extends Thread
 {
     protected final AIZeroMemory mem;
     protected final double dt = 0.01; // in seconds
@@ -18,6 +18,7 @@ public abstract class AIZeroOutput implements Runnable
      */
     public AIZeroOutput(AIZeroMemory mem)
     {
+        super("output");
 	this.mem = mem;
     }
     
