@@ -41,6 +41,13 @@ public abstract class AIZeroLogic extends Thread
         }*/
     }
     
+    public static int getHash(String name, int length){
+        int value = 0;
+        for (int i = 0; i < name.length(); i++ )
+            value += name.charAt(i);
+        return ( value * name.length() ) % length + 100;
+    }
+    
     /*private void ProcessMessages(){
         while(true){
             Info info = mem.dequeFirst("incomingMessages");
