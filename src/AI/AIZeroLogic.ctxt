@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=AIZeroLogic
+comment0.text=\n\ This\ is\ the\ logic\ class\ of\ AI.\n\ \n\ @author\ X.\ Wang\ \n\ @version\ 1.0\n
+comment1.params=mem
+comment1.target=AIZeroLogic(AIZeroMemory)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ AILogic\n\ @param\ mem\n
+comment2.params=t
+comment2.target=void\ Wait(double)
+comment2.text=\n\ this\ is\ a\ wait\ method\n\ \n\ @param\ t\ in\ seconds\n
+comment3.params=name\ length
+comment3.target=int\ getHash(java.lang.String,\ int)
+comment4.params=length
+comment4.target=int\ Wish(int)
+comment4.text=private\ Info\ RandomSentence()\n\ \ \ \ {\n\ \ \ \ \tString\ info\ \=\ mem.GetShortMemory(Wish(mem.getShortLength()));\n\ \ \ \ \ \ \ \ if\ (info\ \=\=\ null)\n\ \ \ \ \ \ \ \ \ \ \ \ return\ Induction(new\ Info("longterm"));\n\ \ \ \ \ \ \ \ return\ new\ Info(info);\n}
+comment5.params=
+comment5.target=void\ ChangeShort()
+comment6.params=
+comment6.target=void\ run()
+comment7.params=
+comment7.target=void\ loop()
+numComments=8

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=InfoZero
+comment0.text=\n\n\ @author\ X.\ Wang\n
+comment1.params=name
+comment1.target=InfoZero(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getPayload()
+comment3.params=
+comment3.target=long\ getTime()
+numComments=4

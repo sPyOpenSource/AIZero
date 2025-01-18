@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Vector
+comment0.text=\n\n\ @author\ X.\ Wang\n\ @param\ <T>\n
+comment1.params=x\ y\ z
+comment1.target=Vector(java.lang.Object,\ java.lang.Object,\ java.lang.Object)
+comment2.params=x\ y\ z
+comment2.target=void\ setValues(java.lang.Object,\ java.lang.Object,\ java.lang.Object)
+comment3.params=vector
+comment3.target=boolean\ Compare(Vector)
+numComments=4

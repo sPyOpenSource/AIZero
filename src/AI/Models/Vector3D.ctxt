@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Vector3D
+comment0.text=\n\n\ @author\ X.\ Wang\n
+comment1.params=x\ y\ z
+comment1.target=Vector3D(java.lang.Double,\ java.lang.Double,\ java.lang.Double)
+comment2.params=
+comment2.target=double\ getLength()
+comment3.params=
+comment3.target=Vector3D\ getUnitVector()
+comment4.params=vector
+comment4.target=Vector3D\ cross(Vector3D)
+comment5.params=
+comment5.target=void\ Normalize()
+comment6.params=vector
+comment6.target=void\ Sub(Vector3D)
+comment7.params=vector
+comment7.target=double\ Dot(Vector3D)
+comment8.params=
+comment8.target=java.lang.String\ Display()
+numComments=9
