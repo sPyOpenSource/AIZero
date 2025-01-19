@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=PID
+comment0.text=\n\n\ @author\ X.\ Wang\n
+comment1.params=kp\ ki\ kd
+comment1.target=PID(double,\ double,\ double)
+comment2.params=max\ min
+comment2.target=void\ setRange(double,\ double)
+comment3.params=setpoint
+comment3.target=void\ setPoint(double)
+comment4.params=x\ v\ dt
+comment4.target=double\ Compute(double,\ double,\ double)
+numComments=5
