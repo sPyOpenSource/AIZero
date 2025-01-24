@@ -16,7 +16,7 @@ public abstract class AIZeroLogic extends Thread
     protected final AIZeroMemory mem;
     protected final double dt = 0.02; // in seconds
     protected final double percentage = 0.5;
-    static final FirstLevelIrqHandler[][] handlers = new FirstLevelIrqHandler[15][4];
+    public static final FirstLevelIrqHandler[][] handlers = new FirstLevelIrqHandler[15][4];
 
     /**
      * Constructor for objects of class AILogic
@@ -134,7 +134,6 @@ public abstract class AIZeroLogic extends Thread
 
     @Override
     public void run() {
-        enableIRQ();
         /*Thread Mutation = new Thread(){
             @Override
             public void run(){
@@ -154,6 +153,4 @@ public abstract class AIZeroLogic extends Thread
     }
     
     abstract protected void loop();
-    
-    abstract void enableIRQ();
 }
