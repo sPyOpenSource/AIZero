@@ -1,6 +1,8 @@
 
 package AI;
 
+import jx.zero.FirstLevelIrqHandler;
+
 /**
  * This is the logic class of AI.
  * 
@@ -14,7 +16,8 @@ public abstract class AIZeroLogic extends Thread
     protected final AIZeroMemory mem;
     protected final double dt = 0.02; // in seconds
     protected final double percentage = 0.5;
-        
+    static final FirstLevelIrqHandler[][] handlers = new FirstLevelIrqHandler[15][4];
+
     /**
      * Constructor for objects of class AILogic
      * @param mem
@@ -47,6 +50,15 @@ public abstract class AIZeroLogic extends Thread
         for (int i = 0; i < name.length(); i++ )
             value += name.charAt(i);
         return ( value * name.length() ) % length + 100;
+    }
+    
+    public static void createIRQ(int irqnr, FirstLevelIrqHandler handler){
+        for(int i = 0; i < handlers[irqnr].length; i++){
+            if (handlers[irqnr][i] == null){
+                handlers[irqnr][i] = handler;
+                break;
+            }
+        }
     }
     
     /*private void ProcessMessages(){
