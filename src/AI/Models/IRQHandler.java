@@ -24,7 +24,7 @@ public class IRQHandler implements FirstLevelIrqHandler {
         }
     }
 
-    public static boolean OK(int irq){
+    public static boolean first(int irq){
         return AIZeroLogic.handlers[irq][1] == null;
     }
 }
