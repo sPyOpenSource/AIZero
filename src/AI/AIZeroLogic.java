@@ -134,6 +134,7 @@ public abstract class AIZeroLogic extends Thread
 
     @Override
     public void run() {
+        enableIRQ();
         /*Thread Mutation = new Thread(){
             @Override
             public void run(){
@@ -153,4 +154,6 @@ public abstract class AIZeroLogic extends Thread
     }
     
     abstract protected void loop();
+    
+    abstract void enableIRQ();
 }
