@@ -27,11 +27,6 @@ public abstract class AIZeroLogic extends Thread
         super("logic");
         // sign an instance variable        
         this.mem = mem;
-        for(FirstLevelIrqHandler[] handler:handlers){
-            for(int i = 0; i < handler.length; i++){
-                handler[i] = null;
-            }
-        }
     }
 
     /**
