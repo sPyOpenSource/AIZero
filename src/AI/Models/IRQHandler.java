@@ -18,6 +18,7 @@ public class IRQHandler implements FirstLevelIrqHandler {
 
     @Override
     public void interrupt() {
+        System.out.println(irq);
         for(FirstLevelIrqHandler handler:AIZeroLogic.handlers[irq]){
             if(handler != null)
                 handler.interrupt();
@@ -27,4 +28,5 @@ public class IRQHandler implements FirstLevelIrqHandler {
     public static boolean first(int irq){
         return AIZeroLogic.handlers[irq][1] == null;
     }
+    
 }
