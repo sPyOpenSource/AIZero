@@ -18,7 +18,7 @@ public class IRQHandler implements FirstLevelIrqHandler {
 
     @Override
     public void interrupt() {
-        System.out.println(irq);
+        //System.out.println(irq);
         for(FirstLevelIrqHandler handler:AIZeroLogic.handlers[irq]){
             if(handler != null)
                 handler.interrupt();

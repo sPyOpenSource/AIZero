@@ -16,7 +16,7 @@ public abstract class AIZeroLogic extends Thread
     protected final AIZeroMemory mem;
     protected final double dt = 0.02; // in seconds
     protected final double percentage = 0.5;
-    public static final FirstLevelIrqHandler[][] handlers = new FirstLevelIrqHandler[15][4];
+    public static final FirstLevelIrqHandler[][] handlers = new FirstLevelIrqHandler[15][5];
 
     /**
      * Constructor for objects of class AILogic
